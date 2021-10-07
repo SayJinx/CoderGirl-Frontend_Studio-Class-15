@@ -1,4 +1,5 @@
-
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import Blog from 'blog'
 // TO DO: Add the Proper Routes to the components Listed Below!
 
 
@@ -7,10 +8,16 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      {/* TO DO: We'll add the Routes and eventually links below this line */}
+    <Router>
+      <div className="App">
+      <Switch>
+        <Route path='/blog'>
+          <Blog />
+        </Route>
+      </Switch>
 
-  </div>
+      </div>
+    </Router>
   );
 }
 
